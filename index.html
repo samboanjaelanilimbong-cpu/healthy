@@ -1,1 +1,135 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Healthy Food and Drink Recipes</title>
+  <meta name="description" content="Three simple healthy recipes for drinks and meals with ingredients, steps, tips, and nutrition highlights." />
+  <style>
+    :root{
+      --bg:#f7fbf7;
+      --card:#ffffff;
+      --accent:#2e8b57;
+      --muted:#6b7280;
+      --maxw:900px;
+      --radius:12px;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      color:#0f172a;
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef7ee);
+      display:flex;
+      justify-content:center;
+      padding:28px 16px;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#66cdaa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 6px 18px rgba(46,139,87,0.18);
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      line-height:1.05;
+    }
+    p.lead{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    main{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    }
+    .recipe{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+    }
+    .media{
+      width:100%;
+      height:220px;
+      border-radius:10px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#f0fff4,#e6f7ec);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .meta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    table.ingredients{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:6px;
+    }
+    table.ingredients td, table.ingredients th{
+      padding:8px 6px;
+      border-bottom:1px dashed #eef3ee;
+      font-size:14px;
+    }
+    .steps{
+      margin:0;
+      padding-left:18px;
+    }
+    .tips{
+      background:#f6fffa;
+      border-left:4px solid var(--accent);
+      padding:10px;
+      border-radius:8px;
+      color:#064e3b;
+      font-size:14px;
+    }
+    footer{
+      margin-top:8px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media(min-width:760px){
+      main{
+        grid-template-columns: 1fr 1fr;
+      }
+      .media{ height:180px; }
+    }
+    @media(print){
+      body{ background:white; padding:0; }
+      .wrap{ box-shadow:none; }
+      header, footer{ display:none; }
+    }
+    .badge{
+      display:inline-block;
+      background:#eef
